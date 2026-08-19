@@ -1,0 +1,226 @@
+# Maroloccio theme for Helix
+# Modified to match Mach syntax highlighting from mach.vim
+
+# ─── UI / Interface ───────────────────────────────────────────
+"ui.background" = { bg = "bg" }
+"ui.background.separator" = { bg = "bg_dark" }
+"ui.text" = "fg"
+"ui.text.focus" = { fg = "fg", bg = "violet_dark", modifiers = ["bold"] }
+"ui.text.inactive" = "grey"
+"ui.text.info" = "fg"
+"ui.cursor" = { fg = "bg_dark", bg = "fg" }
+"ui.cursor.normal" = { fg = "bg_dark", bg = "fg" }
+"ui.cursor.insert" = { fg = "bg_dark", bg = "fg" }
+"ui.cursor.select" = { fg = "bg_dark", bg = "fg" }
+"ui.cursor.match" = { fg = "bg_dark", bg = "green_light" }
+"ui.cursor.primary" = { fg = "bg_dark", bg = "fg" }
+"ui.cursor.primary.normal" = { fg = "bg_dark", bg = "fg" }
+"ui.cursor.primary.insert" = { fg = "bg_dark", bg = "fg" }
+"ui.cursor.primary.select" = { fg = "bg_dark", bg = "fg" }
+"ui.selection" = { bg = "blue" }
+"ui.selection.primary" = { bg = "blue" }
+"ui.linenr" = { fg = "grey", bg = "bg_dark" }
+"ui.linenr.selected" = { fg = "fg", bg = "bg_dark", modifiers = ["bold"] }
+"ui.cursorline.primary" = { bg = "bg_dark" }
+"ui.cursorline.secondary" = { bg = "bg_dark" }
+"ui.statusline" = { fg = "fg", bg = "bg_dark" }
+"ui.statusline.inactive" = { fg = "grey", bg = "bg_dark" }
+"ui.statusline.normal" = { fg = "bg_dark", bg = "yellow" }
+"ui.statusline.insert" = { fg = "bg_dark", bg = "green_light" }
+"ui.statusline.select" = { fg = "bg_dark", bg = "violet" }
+"ui.statusline.separator" = { fg = "grey" }
+"ui.bufferline" = { fg = "grey", bg = "bg_dark" }
+"ui.bufferline.active" = { fg = "fg", bg = "bg" }
+"ui.bufferline.background" = { bg = "bg_dark" }
+"ui.popup" = { bg = "bg_dark" }
+"ui.popup.info" = { fg = "fg", bg = "bg_dark" }
+"ui.window" = { fg = "violet_dark", bg = "bg" }
+"ui.help" = { fg = "fg", bg = "bg_dark" }
+"ui.menu" = { fg = "fg", bg = "bg_dark" }
+"ui.menu.selected" = { fg = "bg_dark", bg = "fg" }
+"ui.menu.scroll" = { fg = "grey", bg = "bg_dark" }
+"ui.picker.header" = { fg = "yellow", bg = "bg_dark" }
+"ui.picker.header.column" = { fg = "fg", bg = "bg_dark" }
+"ui.picker.header.column.active" = { fg = "bg_dark", bg = "yellow" }
+"ui.gutter" = { bg = "bg_dark" }
+"ui.gutter.selected" = { bg = "bg_dark" }
+"ui.highlight" = { fg = "green_light", bg = "green" }
+"ui.highlight.frameline" = { bg = "red" }
+"ui.virtual.ruler" = { bg = "bg_dark" }
+"ui.virtual.whitespace" = "violet_dark"
+"ui.virtual.indent-guide" = "violet_dark"
+"ui.virtual.inlay-hint" = "grey"
+"ui.virtual.inlay-hint.parameter" = "grey"
+"ui.virtual.inlay-hint.type" = "teal"
+"ui.virtual.wrap" = "violet_dark"
+"ui.virtual.jump-label" = { fg = "cyan", modifiers = ["bold", "underlined"] }
+"ui.debug.breakpoint" = "red"
+"ui.debug.active" = "yellow"
+
+# ─── Syntax (针对 mach.vim 映射专门调整) ──────────────────────
+
+# machKeyword -> Keyword -> Statement (lavender)
+"keyword" = "lavender"
+"keyword.control" = "lavender"
+"keyword.control.return" = "lavender"
+# machFunc -> Function (yellow)
+"keyword.function" = "yellow"
+
+# machConditional -> Conditional (orange)
+"keyword.control.conditional" = "orange"
+# machRepeat -> Repeat (green_light)
+"keyword.control.repeat" = "green_light"
+
+# machInclude -> Include (green)
+"keyword.import" = "green"
+# machPreProc -> PreProc (green)
+"keyword.directive" = "green"
+"keyword.directive.define" = "green"
+
+# machSuper -> Title (red)
+"keyword.modifier" = "red"
+# machException -> Exception (red)
+"keyword.control.exception" = "red"
+
+# machStorage -> StorageClass -> Type (深绿色)
+"keyword.storage" = "green"
+"keyword.storage.type" = "green"
+"keyword.storage.modifier" = "green"
+
+# machType -> Type (深绿色)
+"type" = "green"
+"type.builtin" = "green"
+"type.parameter" = "green"
+"type.enum" = "green"
+"type.enum.variant" = "orange"
+
+"constructor" = "green"
+
+# machConstant -> Constant (cyan)
+"constant" = "cyan"
+"constant.builtin" = "cyan"
+"constant.boolean" = "cyan"
+"constant.character" = "cyan"
+"constant.character.escape" = "blue2"
+
+# machInteger -> Number (yellow_dark)
+"constant.numeric.integer" = "yellow_dark"
+# machFloat -> Constant (cyan)
+"constant.numeric.float" = "cyan"
+
+# machString -> String (violet)
+"string" = "violet"
+"string.regexp" = "blue2"
+"string.special" = "blue"
+"string.special.path" = "blue"
+"string.special.url" = "blue"
+"string.special.symbol" = "purple"
+
+# machComment -> Comment (teal)
+"comment" = "teal"
+"comment.line" = "teal"
+"comment.block" = "teal"
+# machSComment / machEscape -> SpecialComment (blue2)
+"comment.block.documentation" = "blue2"
+
+"variable" = "fg"
+# machSelf -> Label (purple)
+"variable.builtin" = "purple"
+"variable.parameter" = "fg"
+"variable.other" = "fg"
+"variable.other.member" = "fg"
+
+# machLabel -> Label (purple)
+"label" = "purple"
+
+# machConstant -> Constant (cyan) !!! mach.vim 把大括号映射成了 Constant
+"punctuation.bracket" = "cyan"
+# machSymbol -> Changed (fg) !!! mach.vim 把逗号分号映射成了 Changed
+"punctuation.delimiter" = "cyan"
+"punctuation.special" = "blue2"
+
+# machOperator -> Operator (pink)
+"operator" = "pink"
+
+# machMacro -> Macro (green)
+"function" = "yellow"
+"function.builtin" = "green"
+"function.method" = "yellow"
+"function.macro" = "green"
+"function.special" = "green"
+
+"tag" = "blue"
+"tag.builtin" = "blue"
+"namespace" = "lavender"
+"special" = "blue"
+
+# ─── Markup (Markdown) ────────────────────────────────────────
+"markup.heading" = "yellow"
+"markup.heading.marker" = "grey"
+"markup.heading.1" = "yellow"
+"markup.heading.2" = "orange"
+"markup.heading.3" = "green_light"
+"markup.heading.4" = "cyan"
+"markup.heading.5" = "violet"
+"markup.heading.6" = "lavender"
+"markup.list" = "orange"
+"markup.list.unnumbered" = "orange"
+"markup.list.numbered" = "orange"
+"markup.list.checked" = "green_light"
+"markup.list.unchecked" = "red"
+"markup.bold" = { fg = "yellow", modifiers = ["bold"] }
+"markup.italic" = { fg = "lavender", modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link" = "blue"
+"markup.link.url" = { fg = "blue2", modifiers = ["underlined"] }
+"markup.link.label" = "blue"
+"markup.link.text" = "violet"
+"markup.quote" = "teal"
+"markup.raw" = "green_light"
+"markup.raw.inline" = "green_light"
+"markup.raw.block" = "green_light"
+
+# ─── Diff ────────────────────────────────────────────────────
+"diff.plus" = "green_light"
+"diff.plus.gutter" = "green_light"
+"diff.minus" = "red"
+"diff.minus.gutter" = "red"
+"diff.delta" = "blue"
+"diff.delta.moved" = "violet"
+"diff.delta.conflict" = "orange"
+"diff.delta.gutter" = "blue"
+
+# ─── Diagnostics ────────────────────────────────────────────
+"diagnostic" = { modifiers = ["underlined"] }
+"hint" = "teal"
+"info" = "blue2"
+"warning" = "orange"
+"error" = "red"
+"debug" = "grey"
+
+# ─── Palette ─────────────────────────────────────────────────
+[palette]
+bg = "#1a202a"
+bg_dark = "#0e1219"
+fg = "#8b9aaa"
+grey = "#2c3138"
+
+cyan = "#82ade0"       # machConstant, machFloat
+teal = "#006666"       # machComment
+yellow = "#ffcc00"     # machFunc, machType
+yellow_dark = "#8b8b00"# machInteger
+orange = "#ff9900"     # machConditional
+
+green = "#107040"      # machInclude, machPreProc, machMacro
+green_light = "#78ba42"# machRepeat
+
+blue = "#3741ad"       # machSpecial
+blue2 = "#2680af"      # machSComment, machEscape
+violet = "#4c4cad"     # machString
+violet_dark = "#333366"
+
+red = "#8f3231"        # machException, machSuper
+lavender = "#9966cc"   # machKeyword, machStatement
+purple = "#7e28a9"     # machLabel, machSelf
+pink = "#6d5279"       # machOperator
+
