@@ -61,38 +61,41 @@
 
 # machKeyword -> Keyword -> Statement (lavender)
 "keyword" = "lavender"
+"keyword.type" = "lavender"
 "keyword.control" = "lavender"
-"keyword.control.return" = "lavender"
+"keyword.return" = "lavender"
 # machFunc -> Function (yellow)
-"keyword.function" = "yellow"
+"keyword.function" = "lavender"
 
 # machConditional -> Conditional (orange)
-"keyword.control.conditional" = "orange"
+"keyword.conditional" = "orange"
 # machRepeat -> Repeat (green_light)
-"keyword.control.repeat" = "green_light"
+"keyword.repeat" = "green_light"
 
 # machInclude -> Include (green)
 "keyword.import" = "green"
 # machPreProc -> PreProc (green)
-"keyword.directive" = "green"
-"keyword.directive.define" = "green"
+"keyword.directive" = "blue"
+"keyword.directive.define" = "blue2"
 
 # machSuper -> Title (red)
-"keyword.modifier" = "red"
+"keyword.modifier" = "lavender"
 # machException -> Exception (red)
-"keyword.control.exception" = "red"
+"keyword.exception" = "red"
 
 # machStorage -> StorageClass -> Type (深绿色)
-"keyword.storage" = "green"
-"keyword.storage.type" = "green"
-"keyword.storage.modifier" = "green"
+"keyword.storage" = "lavender"
+#"keyword.storage.type" = "green"
+#"keyword.storage.modifier" = "green"
 
 # machType -> Type (深绿色)
 "type" = "green"
 "type.builtin" = "green"
 "type.parameter" = "green"
 "type.enum" = "green"
-"type.enum.variant" = "orange"
+"type.variant" = "orange"
+"type.definition" = "blue"
+"type.macro" = "blue2"
 
 "constructor" = "green"
 
@@ -101,17 +104,17 @@
 "constant.builtin" = "cyan"
 "constant.boolean" = "cyan"
 "constant.character" = "cyan"
-"constant.character.escape" = "blue2"
+#"constant.character.escape" = "blue2"
 
 # machInteger -> Number (yellow_dark)
-"constant.numeric.integer" = "yellow_dark"
+"number" = "yellow_dark"
 # machFloat -> Constant (cyan)
-"constant.numeric.float" = "cyan"
+"number.float" = "cyan"
 
 # machString -> String (violet)
 "string" = "violet"
-"string.regexp" = "blue2"
-"string.special" = "blue"
+#"string.regexp" = "blue2"
+"string.special" = "blue2"
 "string.special.path" = "blue"
 "string.special.url" = "blue"
 "string.special.symbol" = "purple"
@@ -121,14 +124,19 @@
 "comment.line" = "teal"
 "comment.block" = "teal"
 # machSComment / machEscape -> SpecialComment (blue2)
-"comment.block.documentation" = "blue2"
+"comment.documentation" = "blue2"
+
+"property" = "green"
 
 "variable" = "fg"
 # machSelf -> Label (purple)
-"variable.builtin" = "purple"
+"variable.builtin" = "blue"
 "variable.parameter" = "fg"
 "variable.other" = "fg"
 "variable.other.member" = "fg"
+
+"variable.module" = "green_light"
+"module" = "violet"
 
 # machLabel -> Label (purple)
 "label" = "purple"
@@ -137,7 +145,9 @@
 "punctuation.bracket" = "cyan"
 # machSymbol -> Changed (fg) !!! mach.vim 把逗号分号映射成了 Changed
 "punctuation.delimiter" = "cyan"
-"punctuation.special" = "blue2"
+"punctuation.special" = "green"
+
+"attribute" = "green"
 
 # machOperator -> Operator (pink)
 "operator" = "pink"
@@ -148,6 +158,9 @@
 "function.method" = "yellow"
 "function.macro" = "green"
 "function.special" = "green"
+"function.call" = "yellow"
+"function.method.call" = "yellow"
+"function.definition" = "yellow"
 
 "tag" = "blue"
 "tag.builtin" = "blue"
@@ -203,19 +216,20 @@
 bg = "#1a202a"
 bg_dark = "#0e1219"
 fg = "#8b9aaa"
-grey = "#2c3138"
+grey = "#3c4148"
 
 cyan = "#82ade0"       # machConstant, machFloat
-teal = "#006666"       # machComment
-yellow = "#ffcc00"     # machFunc, machType
+teal = "#466666"       # machComment
+yellow = "#ccaa00"     # machFunc
 yellow_dark = "#8b8b00"# machInteger
-orange = "#ff9900"     # machConditional
+orange = "#ff7700"     # machConditional
 
-green = "#107040"      # machInclude, machPreProc, machMacro
+green = "#108040"      # machInclude, machPreProc
 green_light = "#78ba42"# machRepeat
+green_dark = "#106030" # machMacro
 
-blue = "#3741ad"       # machSpecial
-blue2 = "#2680af"      # machSComment, machEscape
+blue = "#3690cf"       # machSpecial
+blue2 = "#16709f"      # machSComment, machEscape
 violet = "#4c4cad"     # machString
 violet_dark = "#333366"
 
