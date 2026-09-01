@@ -9,34 +9,35 @@
 "ui.text.inactive" = "grey"
 "ui.text.info" = "fg"
 "ui.cursor" = { fg = "bg_dark", bg = "fg" }
-"ui.cursor.normal" = { fg = "bg_dark", bg = "fg" }
-"ui.cursor.insert" = { fg = "bg_dark", bg = "fg" }
-"ui.cursor.select" = { fg = "bg_dark", bg = "fg" }
-"ui.cursor.match" = { fg = "bg_dark", bg = "green_light" }
+"ui.cursor.normal" = { fg = "bg_dark", bg = "fg_green" }
+"ui.cursor.insert" = { fg = "bg_dark", bg = "red_light" }
+"ui.cursor.select" = { fg = "bg_dark", bg = "violet_light" }
+"ui.cursor.match" = { fg = "bg_dark", bg = "green_lite" }
 "ui.cursor.primary" = { fg = "bg_dark", bg = "fg" }
 "ui.cursor.primary.normal" = { fg = "bg_dark", bg = "fg" }
-"ui.cursor.primary.insert" = { fg = "bg_dark", bg = "fg" }
+"ui.cursor.primary.insert" = { fg = "bg_dark", bg = "red_light" }
 "ui.cursor.primary.select" = { fg = "bg_dark", bg = "fg" }
-"ui.selection" = { bg = "blue" }
-"ui.selection.primary" = { bg = "blue" }
+"ui.selection" = { bg = "violet_lite", fg = "fg_dark" }
+"ui.selection.primary" = { bg = "violet_lite", fg = "fg_dark" }
 "ui.linenr" = { fg = "grey", bg = "bg_dark" }
 "ui.linenr.selected" = { fg = "fg", bg = "bg_dark", modifiers = ["bold"] }
 "ui.cursorline.primary" = { bg = "bg_dark" }
 "ui.cursorline.secondary" = { bg = "bg_dark" }
-"ui.statusline" = { fg = "fg", bg = "bg_dark" }
-"ui.statusline.inactive" = { fg = "grey", bg = "bg_dark" }
-"ui.statusline.normal" = { fg = "bg_dark", bg = "yellow" }
-"ui.statusline.insert" = { fg = "bg_dark", bg = "green_light" }
-"ui.statusline.select" = { fg = "bg_dark", bg = "violet" }
+"ui.statusline" = { fg = "fg", bg = "bg_light" }
+"ui.statusline.inactive" = { fg = "fg", bg = "bg_light" }
+"ui.statusline.normal" = { fg = "bg_dark", bg = "green_light" }
+"ui.statusline.insert" = { fg = "bg_dark", bg = "yellow" }
+"ui.statusline.select" = { fg = "bg_dark", bg = "violet_light" }
 "ui.statusline.separator" = { fg = "grey" }
 "ui.bufferline" = { fg = "grey", bg = "bg_dark" }
 "ui.bufferline.active" = { fg = "fg", bg = "bg" }
 "ui.bufferline.background" = { bg = "bg_dark" }
-"ui.popup" = { bg = "bg_dark" }
-"ui.popup.info" = { fg = "fg", bg = "bg_dark" }
+"ui.popup" = { bg = "bg_light" }
+"ui.popup.info" = { fg = "fg", bg = "bg" }
 "ui.window" = { fg = "violet_dark", bg = "bg" }
 "ui.help" = { fg = "fg", bg = "bg_dark" }
-"ui.menu" = { fg = "fg", bg = "bg_dark" }
+#"ui.menu" = { fg = "fg", bg = "default" }
+"ui.menu" = { fg = "fg", bg = "bg_light" }
 "ui.menu.selected" = { fg = "bg_dark", bg = "fg" }
 "ui.menu.scroll" = { fg = "grey", bg = "bg_dark" }
 "ui.picker.header" = { fg = "yellow", bg = "bg_dark" }
@@ -48,12 +49,12 @@
 "ui.highlight.frameline" = { bg = "red" }
 "ui.virtual.ruler" = { bg = "bg_dark" }
 "ui.virtual.whitespace" = "violet_dark"
-"ui.virtual.indent-guide" = "violet_dark"
+"ui.virtual.indent-guide" = "grey"
 "ui.virtual.inlay-hint" = "grey"
 "ui.virtual.inlay-hint.parameter" = "grey"
 "ui.virtual.inlay-hint.type" = "teal"
 "ui.virtual.wrap" = "violet_dark"
-"ui.virtual.jump-label" = { fg = "cyan", modifiers = ["bold", "underlined"] }
+"ui.virtual.jump-label" = { fg = "violet_light", modifiers = ["bold", "underlined"] }
 "ui.debug.breakpoint" = "red"
 "ui.debug.active" = "yellow"
 
@@ -76,7 +77,7 @@
 "keyword.import" = "green"
 # machPreProc -> PreProc (green)
 "keyword.directive" = "blue"
-"keyword.directive.define" = "blue2"
+"keyword.directive.define" = "blue_dark"
 
 # machSuper -> Title (red)
 "keyword.modifier" = "lavender"
@@ -95,7 +96,7 @@
 "type.enum" = "green"
 "type.variant" = "orange"
 "type.definition" = "blue"
-"type.macro" = "blue2"
+"type.macro" = "blue_dark"
 
 "constructor" = "green"
 
@@ -104,7 +105,7 @@
 "constant.builtin" = "cyan"
 "constant.boolean" = "cyan"
 "constant.character" = "cyan"
-#"constant.character.escape" = "blue2"
+#"constant.character.escape" = "blue_dark"
 
 # machInteger -> Number (yellow_dark)
 "number" = "yellow_dark"
@@ -113,8 +114,8 @@
 
 # machString -> String (violet)
 "string" = "violet"
-#"string.regexp" = "blue2"
-"string.special" = "blue2"
+#"string.regexp" = "blue_dark"
+"string.special" = "blue_dark"
 "string.special.path" = "blue"
 "string.special.url" = "blue"
 "string.special.symbol" = "purple"
@@ -123,8 +124,8 @@
 "comment" = "teal"
 "comment.line" = "teal"
 "comment.block" = "teal"
-# machSComment / machEscape -> SpecialComment (blue2)
-"comment.documentation" = "blue2"
+# machSComment / machEscape -> SpecialComment (blue_dark)
+"comment.documentation" = "blue_dark"
 
 "property" = "green"
 
@@ -185,7 +186,7 @@
 "markup.italic" = { fg = "lavender", modifiers = ["italic"] }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
 "markup.link" = "blue"
-"markup.link.url" = { fg = "blue2", modifiers = ["underlined"] }
+"markup.link.url" = { fg = "blue_dark", modifiers = ["underlined"] }
 "markup.link.label" = "blue"
 "markup.link.text" = "violet"
 "markup.quote" = "teal"
@@ -206,7 +207,7 @@
 # ─── Diagnostics ────────────────────────────────────────────
 "diagnostic" = { modifiers = ["underlined"] }
 "hint" = "teal"
-"info" = "blue2"
+"info" = "blue_dark"
 "warning" = "orange"
 "error" = "red"
 "debug" = "grey"
@@ -214,26 +215,34 @@
 # ─── Palette ─────────────────────────────────────────────────
 [palette]
 bg = "#1a202a"
+bg_light = "#2a303a"
+bg_lite = "#212534"
 bg_dark = "#0e1219"
-fg = "#8b9aaa"
+fg = "#8899aa"
+fg_dark = "#778899"
+fg_green = "#557788"
 grey = "#3c4148"
 
 cyan = "#82ade0"       # machConstant, machFloat
-teal = "#466666"       # machComment
-yellow = "#ccaa00"     # machFunc
+teal = "#445566"       # machComment
+yellow = "#ddaa00"     # machFunc
 yellow_dark = "#8b8b00"# machInteger
 orange = "#ff7700"     # machConditional
 
 green = "#108040"      # machInclude, machPreProc
 green_light = "#78ba42"# machRepeat
+green_lite = "#88aa77"
 green_dark = "#106030" # machMacro
 
 blue = "#3690cf"       # machSpecial
-blue2 = "#16709f"      # machSComment, machEscape
-violet = "#4c4cad"     # machString
+blue_dark = "#16709f"  # machSComment, machEscape
+violet = "#4444aa"     # machString
+violet_lite = "#333388"
 violet_dark = "#333366"
+violet_light = "#6666bb" 
 
 red = "#8f3231"        # machException, machSuper
+red_light = "#887788"        # machException, machSuper
 lavender = "#9966cc"   # machKeyword, machStatement
 purple = "#7e28a9"     # machLabel, machSelf
 pink = "#6d5279"       # machOperator

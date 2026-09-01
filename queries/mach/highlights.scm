@@ -25,11 +25,11 @@
 "cnt" @keyword.control
 "fin" @keyword.control
 
+; Assembly
+"asm" @keyword.directive
+
 ; value after '.'
 (field_expression field: (identifier) @keyword.repeat)
-
-; Assembly
-"asm" @keyword
 
 ((identifier) @type.macro
   (#match? @type.macro "^[_]*[A-Z][A-Z0-9_]*$"))
@@ -119,6 +119,19 @@
 
 (module_path
   (identifier) @module)
+
+(module_path
+  tail: (identifier) @variable.module)
+
+(use_declaration
+  alias: (identifier)
+  path: (module_path
+          (identifier) @module))
+
+(forward_declaration
+  alias: (identifier)
+  path: (module_path
+          (identifier) @module))
 
 ; Test declarations
 (test_declaration
